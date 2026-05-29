@@ -325,7 +325,7 @@ function About() {
               loading="lazy"
               width={1024}
               height={1024}
-              className="absolute inset-[5px] hex-clip h-[calc(100%-10px)] w-[calc(100%-10px)] object-cover"
+              className="absolute inset-[5px] hex-clip h-[calc(100%-10px)] w-[calc(100%-10px)] object-cover object-top"
             />
           </div>
         </div>
