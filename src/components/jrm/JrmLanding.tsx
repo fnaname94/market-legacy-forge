@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import logo from "@/assets/jrm-logo.jpeg";
 import founder from "@/assets/founder.jpg";
+import vitor from "@/assets/vitor.png";
 import { Hexagon, HexOutline } from "./Hexagon";
 import { Counter } from "./Counter";
 import { cn } from "@/lib/utils";
@@ -197,23 +198,48 @@ function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-          <div className="absolute -inset-6 bg-gradient-brand opacity-20 blur-3xl" />
-          <div className="relative aspect-square">
-            <div className="absolute inset-0 hex-clip bg-gradient-brand" />
-            <div className="absolute inset-[6px] hex-clip bg-brand-deep" />
-            <img
-              src={founder}
-              alt="José Roberto Monteiro — fundador da JRM"
-              width={1024}
-              height={1024}
-              className="absolute inset-[6px] hex-clip h-[calc(100%-12px)] w-[calc(100%-12px)] object-cover object-top"
-            />
+        <div className="relative mx-auto w-full max-w-2xl lg:max-w-none grid grid-cols-2 gap-4 sm:gap-6">
+          {/* Partner 1: José Roberto */}
+          <div className="relative w-full">
+            <div className="absolute -inset-4 bg-gradient-brand opacity-15 blur-2xl" />
+            <div className="relative aspect-square">
+              <div className="absolute inset-0 hex-clip bg-gradient-brand" />
+              <div className="absolute inset-[4px] hex-clip bg-brand-deep" />
+              <img
+                src={founder}
+                alt="José Roberto Monteiro — Sócio-Fundador da JRM"
+                width={512}
+                height={512}
+                className="absolute inset-[4px] hex-clip h-[calc(100%-8px)] w-[calc(100%-8px)] object-cover object-top"
+              />
+            </div>
+            <div className="absolute -bottom-4 left-2 right-2 rounded-lg border border-brand-cyan/20 bg-brand-navy/95 px-3 py-2.5 backdrop-blur-md text-center">
+              <div className="font-display text-xs sm:text-sm font-extrabold text-white leading-tight">José Roberto</div>
+              <div className="font-accent text-[8px] sm:text-[9px] uppercase tracking-[0.12em] text-brand-cyan mt-0.5">
+                Fundador & Estrategista
+              </div>
+            </div>
           </div>
-          <div className="absolute -bottom-4 left-6 right-6 rounded-lg border border-brand-cyan/20 bg-brand-navy/90 px-5 py-4 backdrop-blur-md">
-            <div className="font-display text-base font-extrabold text-white">José Roberto Monteiro</div>
-            <div className="font-accent text-[10px] uppercase tracking-[0.16em] text-brand-cyan">
-              Fundador & Estrategista
+
+          {/* Partner 2: Vitor Naname */}
+          <div className="relative w-full">
+            <div className="absolute -inset-4 bg-gradient-brand opacity-15 blur-2xl" />
+            <div className="relative aspect-square">
+              <div className="absolute inset-0 hex-clip bg-gradient-brand" />
+              <div className="absolute inset-[4px] hex-clip bg-brand-deep" />
+              <img
+                src={vitor}
+                alt="Vitor Naname — Sócio da JRM"
+                width={512}
+                height={512}
+                className="absolute inset-[4px] hex-clip h-[calc(100%-8px)] w-[calc(100%-8px)] object-cover object-top"
+              />
+            </div>
+            <div className="absolute -bottom-4 left-2 right-2 rounded-lg border border-brand-cyan/20 bg-brand-navy/95 px-3 py-2.5 backdrop-blur-md text-center">
+              <div className="font-display text-xs sm:text-sm font-extrabold text-white leading-tight">Vitor Naname</div>
+              <div className="font-accent text-[8px] sm:text-[9px] uppercase tracking-[0.12em] text-brand-cyan mt-0.5">
+                Sócio & Análise de Dados
+              </div>
             </div>
           </div>
         </div>
@@ -310,56 +336,115 @@ function Services() {
 }
 
 function About() {
-  const badges = ["Pós-Graduado em Mkt & Gestão", "Estrategista Comercial", "Desde 2018 no mercado"];
+  const joseBadges = ["Pós-Graduado em Mkt & Gestão", "Estrategista Comercial", "Desde 2018"];
+  const vitorBadges = ["IA & Power BI", "Sistemas ERP & CRM", "Dados de Mercado"];
+
   return (
     <section id="sobre" className="relative bg-brand-navy/40 py-24 lg:py-32">
       <div className="absolute inset-0 hex-bg opacity-60" />
-      <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
-        <div className="relative mx-auto w-full max-w-sm">
-          <HexOutline className="absolute -left-10 -top-8" size={140} opacity={0.18} />
-          <div className="relative aspect-square">
-            <div className="absolute inset-0 hex-clip bg-gradient-brand" />
-            <img
-              src={founder}
-              alt="José Roberto Monteiro"
-              loading="lazy"
-              width={1024}
-              height={1024}
-              className="absolute inset-[5px] hex-clip h-[calc(100%-10px)] w-[calc(100%-10px)] object-cover object-top"
-            />
-          </div>
-        </div>
+      
+      <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
+        <SectionHeader
+          eyebrow="Quem está por trás"
+          title={<>Nossos <span className="text-gradient">Sócios</span></>}
+          subtitle="Unimos marketing de alta performance, gestão estratégica e inteligência de dados para construir o legado da sua empresa."
+          center={true}
+        />
 
-        <div>
-          <div className="mb-4 font-accent text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-cyan">
-            Quem está por trás
-          </div>
-          <h2 className="font-display text-4xl font-extrabold uppercase text-white sm:text-5xl">
-            José Roberto <span className="text-gradient">Monteiro</span>
-          </h2>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
-            Empresário. Pós-graduado em Marketing e Gestão. Apaixonado por desafios e por fazer negócios
-            crescerem. Trabalha com marketing e gestão desde 2018, ajudando empresários a estruturar
-            empresas que duram.
-          </p>
+        <div className="grid gap-16 md:grid-cols-2 mt-12">
+          {/* Sócio 1: José Roberto Monteiro */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="relative w-full max-w-[280px] mb-8 mx-auto md:mx-0">
+              <HexOutline className="absolute -left-8 -top-6" size={100} opacity={0.15} />
+              <div className="relative aspect-square">
+                <div className="absolute inset-0 hex-clip bg-gradient-brand" />
+                <img
+                  src={founder}
+                  alt="José Roberto Monteiro"
+                  loading="lazy"
+                  width={512}
+                  height={512}
+                  className="absolute inset-[5px] hex-clip h-[calc(100%-10px)] w-[calc(100%-10px)] object-cover object-top"
+                />
+              </div>
+            </div>
 
-          <div className="mt-6 flex flex-wrap gap-2">
-            {badges.map((b) => (
-              <span
-                key={b}
-                className="rounded-full border border-brand-cyan/30 bg-brand-cyan/5 px-4 py-1.5 font-accent text-[11px] font-semibold uppercase tracking-[0.12em] text-brand-cyan"
-              >
-                {b}
-              </span>
-            ))}
-          </div>
-
-          <blockquote className="mt-8 border-l-2 border-brand-cyan bg-brand-deep/60 p-6">
-            <Quote className="mb-3 h-6 w-6 text-brand-cyan" />
-            <p className="font-display text-xl font-extrabold uppercase leading-snug text-white sm:text-2xl">
-              Gestão empresarial não é custo. É investimento no sucesso do seu negócio.
+            <div className="font-accent text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-cyan mb-2">
+              Sócio-Fundador
+            </div>
+            <h3 className="font-display text-3xl font-extrabold uppercase text-white">
+              José Roberto <span className="text-gradient">Monteiro</span>
+            </h3>
+            <p className="mt-4 text-base leading-relaxed text-white/75 min-h-[120px]">
+              Empresário. Pós-graduado em Marketing e Gestão. Apaixonado por desafios e por fazer negócios
+              crescerem. Trabalha com marketing e gestão desde 2018, ajudando empresários a estruturar
+              empresas que duram.
             </p>
-          </blockquote>
+
+            <div className="mt-6 flex flex-wrap justify-center md:justify-start gap-2">
+              {joseBadges.map((b) => (
+                <span
+                  key={b}
+                  className="rounded-full border border-brand-cyan/30 bg-brand-cyan/5 px-3 py-1 font-accent text-[10px] font-semibold uppercase tracking-[0.12em] text-brand-cyan"
+                >
+                  {b}
+                </span>
+              ))}
+            </div>
+
+            <blockquote className="mt-8 border-l-2 border-brand-cyan bg-brand-deep/60 p-5 text-left w-full">
+              <Quote className="mb-2 h-4 w-4 text-brand-cyan" />
+              <p className="font-display text-lg font-extrabold uppercase leading-snug text-white">
+                Gestão empresarial não é custo. É investimento no sucesso do seu negócio.
+              </p>
+            </blockquote>
+          </div>
+
+          {/* Sócio 2: Vitor Naname */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="relative w-full max-w-[280px] mb-8 mx-auto md:mx-0">
+              <HexOutline className="absolute -left-8 -top-6" size={100} opacity={0.15} />
+              <div className="relative aspect-square">
+                <div className="absolute inset-0 hex-clip bg-gradient-brand" />
+                <img
+                  src={vitor}
+                  alt="Vitor Naname"
+                  loading="lazy"
+                  width={512}
+                  height={512}
+                  className="absolute inset-[5px] hex-clip h-[calc(100%-10px)] w-[calc(100%-10px)] object-cover object-top"
+                />
+              </div>
+            </div>
+
+            <div className="font-accent text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-cyan mb-2">
+              Sócio e Especialista em Análise de Dados
+            </div>
+            <h3 className="font-display text-3xl font-extrabold uppercase text-white">
+              Vitor <span className="text-gradient">Naname</span>
+            </h3>
+            <p className="mt-4 text-base leading-relaxed text-white/75 min-h-[120px]">
+              Especialista em análise de dados com IA, Power BI, ERP e CRM. Vitor implementa sistemas de gestão de clientes e análise de fluxos que transformam dados brutos em insights estratégicos, permitindo decisões mais precisas e eficazes para o crescimento dos negócios.
+            </p>
+
+            <div className="mt-6 flex flex-wrap justify-center md:justify-start gap-2">
+              {vitorBadges.map((b) => (
+                <span
+                  key={b}
+                  className="rounded-full border border-brand-cyan/30 bg-brand-cyan/5 px-3 py-1 font-accent text-[10px] font-semibold uppercase tracking-[0.12em] text-brand-cyan"
+                >
+                  {b}
+                </span>
+              ))}
+            </div>
+
+            <blockquote className="mt-8 border-l-2 border-brand-cyan bg-brand-deep/60 p-5 text-left w-full">
+              <Quote className="mb-2 h-4 w-4 text-brand-cyan" />
+              <p className="font-display text-lg font-extrabold uppercase leading-snug text-white">
+                Dados brutos são apenas ruído. O verdadeiro valor está na inteligência que impulsiona o crescimento.
+              </p>
+            </blockquote>
+          </div>
         </div>
       </div>
     </section>
@@ -492,7 +577,7 @@ function FinalCTA() {
           Pronto para construir <span className="text-gradient">seu legado?</span>
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
-          Agende uma conversa gratuita com José Roberto e descubra como transformar sua empresa com
+          Agende uma conversa gratuita com nossos especialistas e descubra como transformar sua empresa com
           estratégia real.
         </p>
         <div className="mt-10 flex justify-center">
