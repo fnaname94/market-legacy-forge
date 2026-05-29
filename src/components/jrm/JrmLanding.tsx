@@ -207,7 +207,7 @@ function Hero() {
               alt="José Roberto Monteiro — fundador da JRM"
               width={1024}
               height={1024}
-              className="absolute inset-[6px] hex-clip h-[calc(100%-12px)] w-[calc(100%-12px)] object-cover"
+              className="absolute inset-[6px] hex-clip h-[calc(100%-12px)] w-[calc(100%-12px)] object-cover object-top"
             />
           </div>
           <div className="absolute -bottom-4 left-6 right-6 rounded-lg border border-brand-cyan/20 bg-brand-navy/90 px-5 py-4 backdrop-blur-md">
@@ -325,7 +325,7 @@ function About() {
               loading="lazy"
               width={1024}
               height={1024}
-              className="absolute inset-[5px] hex-clip h-[calc(100%-10px)] w-[calc(100%-10px)] object-cover"
+              className="absolute inset-[5px] hex-clip h-[calc(100%-10px)] w-[calc(100%-10px)] object-cover object-top"
             />
           </div>
         </div>
