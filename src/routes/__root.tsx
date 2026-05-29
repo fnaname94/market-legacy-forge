@@ -76,10 +76,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Marketing Digital, Gestão e Estratégia Comercial para empresários que querem crescer de verdade. Alphaville, Barueri - SP." },
       { name: "author", content: "JRM" },
       { property: "og:title", content: "JRM Marketing Digital & Gestão" },
-      { property: "og:description", content: "Não criamos apenas empresas. Construímos legados." },
+      { property: "og:description", content: "Marketing Digital, Gestão e Estratégia Comercial para empresários que querem crescer de verdade. Alphaville, Barueri - SP." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@jrmgestaomkt" },
+      { name: "twitter:title", content: "JRM Marketing Digital & Gestão" },
+      { name: "twitter:description", content: "Marketing Digital, Gestão e Estratégia Comercial para empresários que querem crescer de verdade. Alphaville, Barueri - SP." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8bbbe3f0-fbf4-4a94-b541-ada4f859e581/id-preview-78cad79e--7399b373-d353-48bb-ab23-ef5cda4dbab0.lovable.app-1780066202535.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8bbbe3f0-fbf4-4a94-b541-ada4f859e581/id-preview-78cad79e--7399b373-d353-48bb-ab23-ef5cda4dbab0.lovable.app-1780066202535.png" },
     ],
     links: [
       {
